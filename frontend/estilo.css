@@ -1,0 +1,159 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;
+}
+
+.header{
+    position: relative;
+    height: 10vh;
+}
+
+.header h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+}
+
+.entrar-en-sala{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.entrar-en-sala input[type="text"]{
+    padding: .5rem 1rem;
+    margin: 1rem;
+    min-width: 20rem;
+}
+
+.entrar-en-sala select{
+    padding: .5rem 1rem;
+    margin: 1rem;
+    min-width: 20rem;
+}
+
+.entrar-en-sala button{
+    padding: 1rem 3rem;
+    margin: 1rem;
+    background: #3f51b5;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.sala{
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    -webkit-box-shadow: 5px 6px 19px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 6px 19px -3px rgba(0,0,0,0.75);
+    box-shadow: 5px 6px 19px -3px rgba(0,0,0,0.75);
+}
+
+.sala .sala-header{
+    padding: 1.5rem;
+    font-weight: bold;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    min-height: 7rem;
+}
+
+.sala .sala-header .nombre-sala{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sala .sala-header .imagen-sala{
+    height: 5rem;
+    min-width: 5rem;
+    border-radius: 10rem;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.sala .mensajes{
+    height: 60vh;
+}
+
+.sala .enviar-mensaje{
+    display: flex;
+}
+
+.sala .enviar-mensaje [name="mensaje"]{
+    flex: 3;
+    padding: 1rem .5rem;
+    border: 0;
+    border-top: 3px solid var(--color-primary);
+    margin: 0 .5rem;
+}
+
+.sala .enviar-mensaje [name="btn-enviar"]{
+    flex: 1;
+    padding: 1rem .5rem;
+    border: none;
+    border-bottom-right-radius: 5px;
+    background: var(--color-primary);
+    margin: 0 1rem 1rem 1rem;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sala .mensajes{
+    display: flex;
+    flex-flow: column;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.sala .mensajes .mensaje{
+    display: flex;
+    flex-flow: column;
+    min-width: 8rem;
+    max-width: 15rem;
+    background: #ffc107;
+    border-bottom-right-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.sala .mensajes .mensaje.propio{
+    background: #009688;
+    align-self: flex-end;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    color: white;
+}
+
+.sala .mensajes .mensaje .usuario{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.sala .mensajes .mensaje .texto-mensaje{
+    font-size: 1.3rem;
+}
+
+.oculto{
+    display: none;
+}

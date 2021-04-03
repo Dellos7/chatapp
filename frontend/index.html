@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>ChatApp</title>
+        <link rel="stylesheet" href="estilo.css">
+        <script defer type="text/javascript" src="app.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <h1>Chat App</h1>
+        </header>
+        <main>
+            <form class="entrar-en-sala" method="POST" id="entrar-en-sala" onsubmit="return entrarEnSala(event);">
+                <input name="usuario" type="text" placeholder="Usuario" required>
+                <select name="id-sala" required></select>
+                <button type="submit">Entrar</button>
+            </form>
+        </main>
+        <div id="sala" class="sala oculto">
+            <div class="sala-header" id="sala-header">
+                <img class="imagen-sala" id="imagen-sala">
+                <span class="nombre-sala" id="nombre-sala"></span>
+            </div>
+            <div class="mensajes"></div>
+            <form class="enviar-mensaje" method="POST" id="enviar-mensaje-sala" onsubmit="return enviarMensajeSala(event);">
+                <input name="mensaje" type="text" placeholder="Escribe un mensaje...">
+                <button name="btn-enviar" type="submit">Enviar</button>
+            </form>
+        </div>
+    </body>
+</html>
